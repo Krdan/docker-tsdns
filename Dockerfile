@@ -1,9 +1,7 @@
-FROM solidnerd/alpine-glibc:2.23-r3
+FROM alpine:3.8
 
-MAINTAINER Niclas Mietz <github@mietz.io>
-
-ENV   TS_VERSION=3.0.13.6 \
-      TS_FILENAME=teamspeak3-server_linux_amd64 \
+ENV   TS_VERSION=3.5.1 \
+      TS_FILENAME=teamspeak3-server_linux_alpine \
       TSDNS_USER=tsdns \
       TSDNS_HOME=/tsdns \
       TSDNS_UID=1000 \
@@ -16,7 +14,7 @@ RUN addgroup -S $TSDNS_USER -g ${TSDNS_GID} \
         -u ${TSDNS_UID} \
         $TSDNS_USER
 
-RUN apk add --no-cache wget mysql-client bzip2  \
+RUN apk add --no-cache wget bzip2  \
       && wget "http://dl.4players.de/ts/releases/${TS_VERSION}/${TS_FILENAME}-${TS_VERSION}.tar.bz2" -O ${TS_FILENAME}-${TS_VERSION}.tar.bz2 \
       && tar -xjf "${TS_FILENAME}-${TS_VERSION}.tar.bz2" \
       && rm ${TS_FILENAME}-${TS_VERSION}.tar.bz2 \
