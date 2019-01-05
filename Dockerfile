@@ -22,8 +22,8 @@ RUN apk add --no-cache wget bzip2  \
       && mv ${TS_FILENAME}/tsdns/* ${TSDNS_HOME} \
       && rm -r ${TS_FILENAME} \
 	  && mkdir ${TSDNS_HOME}/config \
-	  && ln -s ${TSDNS_HOME}/config/tsdns_config.info ${TSDNS_HOME}/tsdns_config.info \
-	  && chown -h ${TSDNS_USER}:${TSDNS_USER} ${TSDNS_HOME}/config ${TSDNS_HOME}/tsdns_config.info
+	  && ln -s ${TSDNS_HOME}/config/tsdns_settings.ini ${TSDNS_HOME}/tsdns_settings.ini \
+	  && chown -h ${TSDNS_USER}:${TSDNS_USER} ${TSDNS_HOME}/config ${TSDNS_HOME}/tsdns_settings.ini
 
 USER  ${TSDNS_USER}
 
