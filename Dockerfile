@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM frolvlad/alpine-glibc:alpine-3.8
 
 ENV   TS_VERSION=3.5.1 \
       TS_FILENAME=teamspeak3-server_linux_alpine \
