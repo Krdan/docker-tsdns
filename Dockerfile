@@ -14,8 +14,8 @@ RUN addgroup -S $TSDNS_USER -g ${TSDNS_GID} \
         -u ${TSDNS_UID} \
         $TSDNS_USER
 
-RUN apk add --no-cache wget bzip2  \
-      && wget "http://dl.4players.de/ts/releases/${TS_VERSION}/${TS_FILENAME}-${TS_VERSION}.tar.bz2" -O ${TS_FILENAME}-${TS_VERSION}.tar.bz2 \
+RUN apk add --no-cache curl bzip2  \
+      && curl -O http://dl.4players.de/ts/releases/${TS_VERSION}/${TS_FILENAME}-${TS_VERSION}.tar.bz2 --fail --silent --show-error \
       && tar -xjf "${TS_FILENAME}-${TS_VERSION}.tar.bz2" \
       && rm ${TS_FILENAME}-${TS_VERSION}.tar.bz2 \
       && mkdir -p ${TSDNS_HOME} \
