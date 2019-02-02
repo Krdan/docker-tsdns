@@ -20,7 +20,7 @@ public.teamspeak.com=12.13.14.15:10000
 
 3. Start the container
 ```
-docker run -d -p 41144:41144 -v $(pwd)/tsdns_settings.ini:/tsdns/tsdns_settings.ini:ro --name tsdns krdan/tsdns:3.6.1
+docker run -d -p 41144:41144 -v $(pwd)/tsdns_settings.ini:/var/tsdns/tsdns_settings.ini:ro --name tsdns krdan/tsdns:3.6.1
 ```
 
 # Update TSDNS Entries
