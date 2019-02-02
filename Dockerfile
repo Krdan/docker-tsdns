@@ -4,8 +4,8 @@ ENV   TS_VERSION=3.6.1 \
       TS_FILENAME=teamspeak3-server_linux_alpine \
       TSDNS_USER=tsdns \
       TSDNS_HOME=/tsdns \
-      TSDNS_UID=9987 \
-      TSDNS_GID=9987
+      TSDNS_UID=1000 \
+      TSDNS_GID=1000
 
 RUN addgroup -S $TSDNS_USER -g ${TSDNS_GID} \
       && adduser -S  \
