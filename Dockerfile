@@ -1,6 +1,6 @@
 FROM frolvlad/alpine-glibc:alpine-3.8
 
-ENV   TS_VERSION=3.6.1 \
+ENV   TS_VERSION=3.7.0 \
       TS_FILENAME=teamspeak3-server_linux_alpine \
       TSDNS_USER=tsdns \
       TSDNS_HOME=/var/tsdns \
