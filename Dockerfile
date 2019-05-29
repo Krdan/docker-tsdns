@@ -15,7 +15,7 @@ RUN addgroup -S $TSDNS_USER -g ${TSDNS_GID} \
         $TSDNS_USER
 
 RUN apk add --no-cache curl bzip2  \
-      && curl -O http://dl.4players.de/ts/releases/${TS_VERSION}/${TS_FILENAME}-${TS_VERSION}.tar.bz2 --fail --silent --show-error \
+      && curl -O https://files.teamspeak-services.com/releases/server/${TS_VERSION}/${TS_FILENAME}-${TS_VERSION}.tar.bz2 --fail --silent --show-error \
       && tar -xjf "${TS_FILENAME}-${TS_VERSION}.tar.bz2" \
       && rm ${TS_FILENAME}-${TS_VERSION}.tar.bz2 \
       && mkdir -p ${TSDNS_HOME} \
