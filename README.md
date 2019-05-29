@@ -11,7 +11,7 @@ Base image: frolvlad/alpine-glibc:alpine-3.9
 
 1. Copy the `tsdns_settings.ini.sample` to add your host with
 ```
-docker run --rm --entrypoint="/bin/sh" krdan/tsdns:3.7.1 -c "cat tsdns_settings.ini.sample" > tsdns_settings.ini
+docker run --rm --entrypoint="/bin/sh" krdan/tsdns:3.8.0 -c "cat tsdns_settings.ini.sample" > tsdns_settings.ini
 ```
 2. Add your entries in `tsdns_settings.ini`
 ```
