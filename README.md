@@ -6,7 +6,7 @@ docker-tsdns
 This image is based on [solidnerd/docker-tsdns](https://github.com/SolidNerd/docker-tsdns). 
 
 # Current Version: [3.12.0](https://github.com/Krdan/docker-tsdns/blob/master/Dockerfile)
-Base image: frolvlad/alpine-glibc:alpine-3.9
+Base image: frolvlad/alpine-glibc:alpine-3.11
 # Getting Started
 
 1. Copy the `tsdns_settings.ini.sample` to add your host with
